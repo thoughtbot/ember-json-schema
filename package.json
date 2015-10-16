@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/thoughtbot/ember-json-schema",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Sean Doyle <sean.p.doyle24@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
@@ -38,7 +38,10 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "json schema",
+    "model",
+    "generate"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3"
