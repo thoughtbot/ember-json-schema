@@ -104,6 +104,12 @@ Then, load the schema from your model like normal.
 
 [symlink]: https://en.wikipedia.org/wiki/Symbolic_link
 
+### Caveats
+
+* When a JSON Schema declares `{ "type": ["string", "null"] }`, the Model and
+  Factory generators will treat it as the first type (in this case,
+`DS.attr('string')`).
+
 ## Installation
 
 * `git clone` this repository

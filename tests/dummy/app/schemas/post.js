@@ -10,6 +10,7 @@ export default {
       items: { type: 'string' }
     },
     hash: { type: 'object' },
+    metadata: { type: ['object', 'null'] },
     user_id: { type: 'number' },
     topic_ids: {
       type: 'array',

@@ -1,6 +1,8 @@
 master
 ------
 
+* Support `{ type: ["string", "null"] }` style properties
+
 0.0.2
 -----
 
