@@ -27,7 +27,7 @@ export default class Factory {
       if (Ember.isArray(property.type)) {
         const [firstType] = property.type;
         attrs[key] = generateValue(firstType, key);
-      } else {
+      } else if (key !== 'id') {
         attrs[key] = generateValue(property.type, key);
       }
     });
