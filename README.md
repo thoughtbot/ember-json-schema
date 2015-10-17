@@ -34,6 +34,8 @@ export default {
 };
 ```
 
+### Generating Models
+
 In your model file, load the schema, generate the `JsonSchemaModel`, and mix it
 into the model declaration:
 
@@ -56,6 +58,28 @@ export default DS.Model.extend(JsonSchemaModel.generate(schema), {
   // likes: DS.attr('number'),
   // tags: DS.attr({ defaultValue: [] }),
   // hash: DS.attr({ defaultValue: {} }),
+});
+```
+
+### Generating Mirage Factories
+
+In your factory file, load the schema, generate the `JsonSchemaFactory`, and mix
+it into the factory declaration:
+
+```js
+// app/mirage/factories/post.js
+
+import schema from 'my-app/schemas/post';
+import JsonSchemaFactory from 'ember-json-schema/mirage/factory';
+import Mirage from 'ember-cli-mirage';
+
+export default Mirage.Factory.extend(JsonSchemaFactory.generate(schema), {
+  // This generates the following factory attributes:
+  //
+  // title: 'abc123',
+  // isPublished: false,
+  // postedAt: () => new Date(),
+  // likes: 0,
 });
 ```
 
