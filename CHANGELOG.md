@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.4
+-----
+
 * Don't generate an "id" attribute in Mirage Factory. Mirage is responsible for
   that
 
