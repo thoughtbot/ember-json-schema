@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.2
+-----
+
 * Generate `Mirage.Factory` attributes from a JSON Schema.
 * Generate `DS.hasMany` and `DS.belongsTo` relationships from JSON Schema.
 
