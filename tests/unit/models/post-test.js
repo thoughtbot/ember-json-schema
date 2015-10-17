@@ -4,8 +4,41 @@ import { moduleForModel, test } from 'ember-qunit';
 const { get } = Ember;
 
 moduleForModel('post', 'Unit | Model | post', {
-  // Specify the other units that are required for this test.
-  needs: []
+  needs: [
+    'model:user',
+    'model:topic',
+  ],
+});
+
+test('relationships', function(assert) {
+  const modelClass = this.store().modelFor('post');
+  const relationships = get(modelClass, 'relationshipsByName');
+
+  const user = relationships.get('user');
+
+  assert.equal(
+    user.key,
+    'user',
+    'generates relationship with user'
+  );
+  assert.equal(
+    user.kind,
+    'belongsTo',
+    'generates relationship of type belongsTo'
+  );
+
+  const topics = relationships.get('topics');
+
+  assert.equal(
+    topics.key,
+    'topics',
+    'generates relationship with topics'
+  );
+  assert.equal(
+    topics.kind,
+    'hasMany',
+    'generates relationship of type hasMany'
+  );
 });
 
 test('attrs', function(assert) {

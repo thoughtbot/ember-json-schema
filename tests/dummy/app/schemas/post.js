@@ -10,5 +10,10 @@ export default {
       items: { type: 'string' }
     },
     hash: { type: 'object' },
+    user_id: { type: 'number' },
+    topic_ids: {
+      type: 'array',
+      items: { type: 'number' },
+    },
   },
 };

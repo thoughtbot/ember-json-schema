@@ -25,6 +25,11 @@ export default {
       items: { type: 'string' }
     },
     hash: { type: 'object' },
+    user_id: { type: 'number' },
+    topic_ids: {
+      type: 'array',
+      items: { type: 'number' },
+    }
   },
 };
 ```
@@ -41,6 +46,9 @@ import { JsonSchemaModel } from 'ember-json-schema';
 
 export default DS.Model.extend(JsonSchemaModel.generate(schema), {
   // This generates the following attributes:
+  //
+  // user: DS.belongsTo({ async: true }),
+  // topics: DS.hasMany({ async: true }),
   //
   // title: DS.attr('string'),
   // isPublished: DS.attr('boolean'),
