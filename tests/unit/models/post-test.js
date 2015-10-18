@@ -79,4 +79,11 @@ test('attrs', function(assert) {
   assert.equal(hash.type, null, 'generates generic attribute');
 
   assert.deepEqual(get(model, 'hash'), {}, 'defaults to empty object');
+
+  const other = attrs.get('other');
+
+  assert.equal(other.name, 'other', 'generates generic attribute');
+  assert.equal(other.type, null, 'generates generic attribute');
+
+  assert.ok(!get(model, 'other'), 'defaults to generic object');
 });

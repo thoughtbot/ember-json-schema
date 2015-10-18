@@ -8,7 +8,9 @@ function cleanKey(key) {
 }
 
 function buildProperty(key, name, type) {
-  if (type.match(/string|number|boolean|date/i)) {
+  if (!type) {
+    return [name, DS.attr()];
+  } else if (type.match(/string|number|boolean|date/i)) {
     if (key.match(/_id$/)) {
       return [name, DS.belongsTo({ async: true })];
     } else {

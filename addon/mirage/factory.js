@@ -13,6 +13,8 @@ function generateValue(type, key) {
     return {};
   } else if (type === 'array') {
     return [];
+  } else {
+    return null;
   }
 }
 

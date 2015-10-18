@@ -11,6 +11,7 @@ export default {
     },
     hash: { type: 'object' },
     metadata: { type: ['object', 'null'] },
+    other: { '$ref': 'other.json' },
     user_id: { type: 'number' },
     topic_ids: {
       type: 'array',
