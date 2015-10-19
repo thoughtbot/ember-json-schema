@@ -131,3 +131,36 @@ Then, load the schema from your model like normal.
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+## Contributing
+
+See the [CONTRIBUTING] document.
+Thank you, [contributors]!
+
+  [CONTRIBUTING]: CONTRIBUTING.md
+  [contributors]: https://github.com/thoughtbot/ember-json-schema/graphs/contributors
+
+## License
+
+ember-json-schema is Copyright (c) 2015 thoughtbot, inc.
+It is free software, and may be redistributed
+under the terms specified in the [LICENSE] file.
+
+  [LICENSE]: /LICENSE.md
+
+## About
+
+ember-json-schema is maintained by [Sean Doyle][seanpdoyle].
+
+![thoughtbot](https://thoughtbot.com/logo.png)
+[seanpdoyle]: https://github.com/seanpdoyle
+
+ember-json-schema is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+We love open source software!
+See [our other projects][community]
+or [hire us][hire] to help build your product.
+
+  [community]: https://thoughtbot.com/community?utm_source=github
+  [hire]: https://thoughtbot.com/hire-us?utm_source=github
