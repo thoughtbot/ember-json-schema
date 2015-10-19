@@ -1,6 +1,9 @@
 master
 ------
 
+0.0.5
+-----
+
 * Gracefully handle `$ref` key (instead of `type` key)
 
 0.0.4
