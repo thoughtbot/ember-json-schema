@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-function generateValue(type, key) {
+function generateValue(key, type) {
   if (type === 'string') {
     return (i) => `${key} #${i}`;
   } else if (type === 'number') {
@@ -20,20 +20,26 @@ function generateValue(type, key) {
 
 export default class Factory {
   static generate(schema) {
-    const attrs = {};
-    const properties = schema.properties;
+    const attributes = {};
 
-    Object.keys(properties).forEach(key => {
-      const property = properties[key];
+    if (typeof schema.properties !== 'undefined' &&
+        typeof schema.properties.attributes !== 'undefined' &&
+        typeof schema.properties.attributes.properties !== 'undefined') {
+      const schemaAttributes = schema.properties.attributes.properties;
 
-      if (Ember.isArray(property.type)) {
-        const [firstType] = property.type;
-        attrs[key] = generateValue(firstType, key);
-      } else if (key !== 'id') {
-        attrs[key] = generateValue(property.type, key);
-      }
-    });
+      Object.keys(schemaAttributes).forEach(key => {
+        const property = schemaAttributes[key];
+        const type = property.type;
 
-    return attrs;
+        if (Ember.isArray(type)) {
+          const [firstType] = type;
+          attributes[key] = generateValue(key, firstType);
+        } else if (key !== 'id') {
+          attributes[key] = generateValue(key, type);
+        }
+      });
+    }
+
+    return attributes;
   }
 }
