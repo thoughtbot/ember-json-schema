@@ -1,7 +1,7 @@
 {
   "name": "ember-json-schema",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.6",
+  "description": "Creates Ember models from JSON Schema files.",
   "keywords": [
     "ember-addon"
   ],
