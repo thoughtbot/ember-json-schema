@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": ["id", "type", "links", "attributes", "relationships"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": {
+      "type": "string",
+      "pattern": "^others$"
+    },
+    "attributes": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string" }
+      }
+    }
+  }
+}

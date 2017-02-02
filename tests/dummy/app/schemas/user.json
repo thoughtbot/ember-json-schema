@@ -1,0 +1,41 @@
+{
+  "definitions": {
+    "user": {
+      "type": "object",
+      "required": ["id", "type", "attributes", "relationships"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": {
+          "type": "string",
+          "pattern": "^users$"
+        },
+        "attributes": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string" }
+          }
+        },
+        "relationships": {
+          "type": "object",
+          "required": ["posts"],
+          "properties": {
+            "posts": {
+              "type": "object",
+              "required": ["links"],
+              "properties": {
+                "links": {
+                  "type": "object",
+                  "required": ["related"],
+                  "properties": {
+                    "related": { "type": "uri" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

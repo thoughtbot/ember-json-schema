@@ -11,7 +11,6 @@ moduleForModel('post', 'Unit | Model | post', {
 });
 
 test('relationships', function(assert) {
-  console.log('test(relationships)');
   const modelClass = this.store().modelFor('post');
   const relationships = get(modelClass, 'relationshipsByName');
 
