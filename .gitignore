@@ -8,6 +8,9 @@
 /node_modules
 /bower_components
 
+# lock file
+yarn.lock
+
 # misc
 /.sass-cache
 /connect.lock
