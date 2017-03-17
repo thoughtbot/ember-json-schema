@@ -18,11 +18,11 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^5.1.7"
+    "ember-cli-babel": "^5.1.7",
+    "broccoli-json-schema-module": "ontohub/broccoli-json-schema-module"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
-    "broccoli-json-schema-module": "ontohub/broccoli-json-schema-module",
     "ember-ajax": "^2.4.1",
     "ember-browserify": "1.1.13",
     "ember-cli": "2.11.0",
